@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulateur de Configuration de Voiture</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Simulateur de Configuration de Voiture</h1>
+    </header>
+    <main>
+      <section id="configurator">
+        <h2>Configurer votre voiture</h2>
+        <label for="car-model">Modèle de voiture:</label>
+        <select id="car-model">
+          <option value="model1">Modèle 1</option>
+          <option value="model2">Modèle 2</option>
+        </select>
+        <label for="car-color">Couleur extérieure:</label>
+        <input type="color" id="car-color" name="car-color" value="#ff0000" />
+        <label for="car-wheels">Jantes:</label>
+        <select id="car-wheels">
+          <option value="wheels1">Jantes 1</option>
+          <option value="wheels2">Jantes 2</option>
+        </select>
+        <button id="show-summary">Voir le résumé</button>
+      </section>
+      <section id="summary" style="display: none">
+        <h2>Résumé de votre configuration</h2>
+        <p id="summary-content"></p>
+        <button id="modify-config">Modifier</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
