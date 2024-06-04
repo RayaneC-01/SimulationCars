@@ -7,6 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const configuratorSection = document.getElementById('configurator');
     const summaryContent = document.getElementById('summary-content');
     const modifyConfigButton = document.getElementById('modify-config');
+    const carImage = document.getElementById('car-image');
+
+    function updateCarImage() {
+        const model = modelSelect.value;
+        const wheels = wheelsSelect.value;
+
+        carImage.src = `images/${model}_${wheels}.png`;
+    }
+
+    modelSelect.addEventListener('change', updateCarImage);
+    wheelsSelect.addEventListener('change', updateCarImage);
 
     showSummaryButton.addEventListener('click', () => {
         const model = modelSelect.value;
